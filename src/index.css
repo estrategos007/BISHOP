@@ -1,0 +1,202 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Design system moderno - Escalonamento e contabilização de horas
+Paleta moderna com gradientes e suporte a modo escuro/claro
+*/
+
+@layer base {
+  :root {
+    /* Light theme - Tema moderno com azul profundo e acentos vibrantes */
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    /* Primary - Azul moderno */
+    --primary: 221 83% 53%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 221 83% 45%;
+
+    /* Secondary - Cinza suave */
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 8% 46%;
+
+    /* Accent - Verde vibrante */
+    --accent: 142 71% 45%;
+    --accent-foreground: 0 0% 100%;
+    --accent-hover: 142 71% 37%;
+
+    /* Success - Verde */
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+
+    /* Warning - Âmbar */
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    /* Error - Vermelho */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 221 83% 53%;
+
+    /* Time grid cores modernas */
+    --grid-cell: 0 0% 100%;
+    --grid-cell-hover: 221 40% 98%;
+    --grid-cell-active: 142 50% 95%;
+    --grid-cell-selected: 142 71% 45%;
+    --grid-header: 221 83% 53%;
+    --grid-border: 220 13% 91%;
+
+    /* Gradientes modernos */
+    --gradient-primary: linear-gradient(135deg, hsl(221 83% 53%), hsl(221 83% 45%));
+    --gradient-secondary: linear-gradient(135deg, hsl(220 14% 96%), hsl(220 13% 91%));
+    --gradient-accent: linear-gradient(135deg, hsl(142 71% 45%), hsl(142 71% 37%));
+    --gradient-hero: linear-gradient(135deg, hsl(221 83% 53%) 0%, hsl(142 71% 45%) 100%);
+
+    /* Shadows modernos */
+    --shadow-sm: 0 1px 2px 0 hsl(220 13% 91% / 0.15);
+    --shadow-md: 0 4px 6px -1px hsl(220 13% 91% / 0.3), 0 2px 4px -1px hsl(220 13% 91% / 0.15);
+    --shadow-lg: 0 10px 15px -3px hsl(220 13% 91% / 0.3), 0 4px 6px -2px hsl(220 13% 91% / 0.15);
+    --shadow-glow: 0 0 20px hsl(221 83% 53% / 0.3);
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    /* Dark theme - Tema escuro moderno */
+    --background: 222 84% 5%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 84% 5%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 84% 5%;
+    --popover-foreground: 210 40% 98%;
+
+    /* Primary - Azul mais claro no escuro */
+    --primary: 221 83% 53%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 221 83% 60%;
+
+    /* Secondary - Cinza escuro */
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    /* Accent - Verde mais vibrante */
+    --accent: 142 71% 45%;
+    --accent-foreground: 0 0% 100%;
+    --accent-hover: 142 71% 52%;
+
+    /* Success */
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+
+    /* Warning */
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    /* Error */
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 221 83% 53%;
+
+    /* Time grid cores escuras */
+    --grid-cell: 217 33% 17%;
+    --grid-cell-hover: 217 33% 22%;
+    --grid-cell-active: 142 30% 25%;
+    --grid-cell-selected: 142 71% 45%;
+    --grid-header: 221 83% 53%;
+    --grid-border: 217 33% 22%;
+
+    /* Gradientes escuros */
+    --gradient-primary: linear-gradient(135deg, hsl(221 83% 53%), hsl(221 83% 45%));
+    --gradient-secondary: linear-gradient(135deg, hsl(217 33% 17%), hsl(217 33% 22%));
+    --gradient-accent: linear-gradient(135deg, hsl(142 71% 45%), hsl(142 71% 37%));
+    --gradient-hero: linear-gradient(135deg, hsl(221 83% 53%) 0%, hsl(142 71% 45%) 100%);
+
+    /* Shadows escuros */
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.25);
+    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.4), 0 2px 4px -1px hsl(0 0% 0% / 0.25);
+    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.4), 0 4px 6px -2px hsl(0 0% 0% / 0.25);
+    --shadow-glow: 0 0 20px hsl(221 83% 53% / 0.4);
+  }
+
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground transition-colors duration-300;
+  }
+}
+
+@layer components {
+  /* Glassmorphism effect */
+  .glass {
+    @apply bg-white/80 backdrop-blur-md border border-white/20;
+  }
+  
+  .glass-dark {
+    @apply dark:bg-black/20 dark:backdrop-blur-md dark:border-white/10;
+  }
+
+  /* Modern gradient backgrounds */
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  /* Enhanced shadows */
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  /* Strategic Time Grid - 48 columns layout */
+  .grid-cols-48 {
+    display: grid;
+    grid-template-columns: repeat(48, minmax(0, 1fr));
+  }
+
+  /* Compact strategic grid styling */
+  .strategic-grid {
+    font-family: 'Courier New', monospace;
+    user-select: none;
+    border-radius: 12px !important; /* Cantos arredondados em todo o card */
+    overflow: hidden !important; /* Garante que o conteúdo respeite o border-radius */
+  }
+
+  .strategic-grid .time-slot {
+    width: 100%;
+    min-width: 12px;
+    max-width: 20px;
+    height: 14px;
+    border: none;
+    border-right: 1px solid #e2e8f0;
+    transition: all 0.15s ease;
+    display: flex;
+  }
+}
